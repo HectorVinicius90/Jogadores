@@ -34,11 +34,7 @@ function pesquisar() {
             </div>
         `;
         }
-        if (!resultados == "") {
-            section,innerHTML = "<p>Nada foi encontrado</p>"
-            return
-        }
-        
+      
     }
     
     // Insere o HTML dos resultados na seção de resultados
