@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Definição do conjunto de caracteres para suporte a acentos e caracteres especiais -->
+    <meta charset="UTF-8">
+    
+    <!-- Configuração para tornar a página responsiva em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link para a folha de estilos externa (CSS) -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Título da página exibido na aba do navegador -->
+    <title>Jogadores</title>
+</head>
+
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <h1>Jogadores de Futebol</h1>
+    </header>
+    
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Seção contendo o campo de pesquisa e o botão -->
+        <section>
+            <!-- Campo de entrada para digitar o nome do jogador -->
+            <input type="text" placeholder="Pesquise seu jogador" id="campo-pesquisa">
+            
+            <!-- Botão que chama a função pesquisar ao ser clicado -->
+            <button onclick="pesquisar()">Pesquisar</button>
+        </section>
+        
+        <!-- Seção onde os resultados da pesquisa serão exibidos -->
+        <section class="resultados-pesquisa" id="resultados-pesquisa">    
+        </section>
+    </main>
+    
+    <!-- Rodapé da página -->
+    <footer>
+        <p>Todos os direitos reservados®</p>
+    </footer>
+    
+    <!-- Inclusão dos arquivos JavaScript para funcionalidade da página -->
+    <script src="dados.js"></script>
+    <script src="app.js"></script>
+    <script>
+        document.getElementById('campo-pesquisa').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                pesquisar();
+        }
+    });
+</script>
+    
+</body>
+</html>
